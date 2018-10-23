@@ -131,5 +131,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-with open('apphoz/templates/django.json') as data_file:
+with open('apphoz/app_templates/python.json') as data_file:
     JSON_TEMPLATE = json.load(data_file)
