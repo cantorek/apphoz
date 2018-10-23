@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^api/', include('rest_framework.urls')),
     path('template', views.template),
+    path('health', views.health),
 ]

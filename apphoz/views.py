@@ -10,3 +10,6 @@ from d.settings import JSON_TEMPLATE
 
 def template(request):
     return JsonResponse(JSON_TEMPLATE)
+
+def health(request):
+    return HttpResponse('')
