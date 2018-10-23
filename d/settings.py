@@ -97,7 +97,7 @@ REST_FRAMEWORK = {
 SOCIALACCOUNT_PROVIDERS = {
     'github': {
         'SCOPE': [
-            'user',
+            'read:user',
             'write:repo_hook',
         ],
     }
