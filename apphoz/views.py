@@ -5,7 +5,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.http import JsonResponse
 
-from d.settings import JSON_TEMPLATE
+from d.settings_common import JSON_TEMPLATE
 
 
 def template(request):
