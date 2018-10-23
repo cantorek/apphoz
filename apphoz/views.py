@@ -26,4 +26,4 @@ def index(request):
         st = SocialToken.objects.get(account=sa)
     except Exception as e:
         pass
-    return django.shortcuts.render(request, 'index.j2', st)
+    return django.shortcuts.render(request, 'index.j2', { 'st' : st })
