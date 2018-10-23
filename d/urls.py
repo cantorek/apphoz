@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^accounts/', include('allauth.urls')),
 
     #apphoz
+    path('', views.index),
     path('template', views.template),
     path('health', views.health),
 ]
