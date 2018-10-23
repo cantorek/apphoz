@@ -19,8 +19,13 @@ from django.conf.urls import url, include
 from apphoz import views
 
 urlpatterns = [
+    #admin
     path('admin/', admin.site.urls),
+    #plugins
     url(r'^api/', include('rest_framework.urls')),
+    url(r'^accounts/', include('allauth.urls')),
+
+    #apphoz
     path('template', views.template),
     path('health', views.health),
 ]
