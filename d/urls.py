@@ -27,6 +27,7 @@ urlpatterns = [
 
     #apphoz
     path('', views.index),
+    path('profile', views.profile),
     path('template', views.template),
     path('health', views.health),
 ]

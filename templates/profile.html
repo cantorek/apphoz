@@ -1,0 +1,7 @@
+{{ user }}
+{{ vcs }}
+<br />
+{% for repo in vcs.get_repos %}
+    {{ repo.name }} | {{ repo.language }} | {{ repo.clone_url }}
+    <br />
+{% endfor %}

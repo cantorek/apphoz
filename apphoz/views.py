@@ -7,6 +7,7 @@ import django.shortcuts
 from django.http import HttpResponse
 from django.http import JsonResponse
 
+from apphoz.vcs import Vcs
 from d.settings_common import JSON_TEMPLATE
 
 
@@ -18,12 +19,11 @@ def health(request):
     return HttpResponse('')
 
 
-@login_required
 def index(request):
-    st = None
-    try:
-        sa = SocialAccount.objects.get(user=request.user)
-        st = SocialToken.objects.get(account=sa)
-    except Exception as e:
-        pass
-    return django.shortcuts.render(request, 'index.j2', { 'st' : st })
+    return HttpResponse('')
+
+@login_required
+def profile(request):
+    vcs = Vcs(request.user)
+
+    return django.shortcuts.render(request, 'profile.html', { 'vcs' : vcs })
