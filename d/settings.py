@@ -26,7 +26,7 @@ SECRET_KEY = 'PaulaToFajnaDupadu@!8m0*106-15hpm-c=)o21dhp(2hcpoipzb58j--ozqxm8rk
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [ '*' ]
 
 
 # Application definition
