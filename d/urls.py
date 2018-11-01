@@ -30,4 +30,5 @@ urlpatterns = [
     path('profile', views.profile),
     path('template', views.template),
     path('health', views.health),
+    path('app/create/<int:repo_id>/', views.create_app),
 ]

@@ -2,6 +2,6 @@
 {{ vcs }}
 <br />
 {% for repo in vcs.get_repos %}
-    {{ repo.name }} | {{ repo.language }} | {{ repo.clone_url }}
+    {{ repo.name }} | {{ repo.language }} | {{ repo.clone_url }} | {{ repo.id }} | <a href="/app/create/{{ repo.id }}/" >create</a>
     <br />
 {% endfor %}

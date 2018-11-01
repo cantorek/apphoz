@@ -106,7 +106,7 @@
             "from": {
               "kind": "ImageStreamTag",
               "namespace": "${NAMESPACE}",
-              "name": "python:3.6"
+              "name": "${IMAGE}"
             },
             "env": [
               {
@@ -150,7 +150,7 @@
       },
       "spec": {
         "strategy": {
-          "type": "Recreate"
+          "type": "Rolling"
         },
         "triggers": [
           {
@@ -245,6 +245,13 @@
       "required": true,
       "description": "The OpenShift Namespace where the ImageStream resides.",
       "value": "openshift"
+    },
+    {
+      "name": "IMAGE",
+      "displayName": "Image",
+      "required": true,
+      "description": "The OpenShift image name and version.",
+      "value": "python:3.6"
     },
     {
       "name": "MEMORY_LIMIT",

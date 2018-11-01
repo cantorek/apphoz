@@ -11,11 +11,18 @@ class Vcs:
         try:
             sa = SocialAccount.objects.get(user=user)
             st = SocialToken.objects.get(account=sa)
+            self.g = Github(st.token)
         except Exception as e:
+            self.g = Github('')
             return None
 
-        self.g = Github(st.token)
 
     @property
     def get_repos(self):
         return self.g.get_user().get_repos()
+
+    def get_repo(self, repo_id):
+        return self.g.get_repo(repo_id)
+
+    def get_github(self):
+        return self.g
