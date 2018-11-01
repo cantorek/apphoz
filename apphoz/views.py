@@ -32,7 +32,7 @@ def index(request):
 
 @login_required
 def profile(request):
-    vcs = Vcs()
+    vcs = Vcs(request.user)
 
     return django.shortcuts.render(request, 'profile.html', { 'vcs' : vcs })
 
