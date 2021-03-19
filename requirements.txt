@@ -5,7 +5,7 @@ Deprecated==1.2.3
 Django==2.1.2
 django-allauth==0.38.0
 django-rest-framework==0.1.0
-djangorestframework==3.9.0
+djangorestframework==3.11.2
 idna==2.7
 oauthlib==2.1.0
 psycopg2==2.7.5
